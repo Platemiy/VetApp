@@ -1,0 +1,18 @@
+
+/* Class = "UIViewController"; title = "Third"; ObjectID = "3hi-Ku-og6"; */
+"3hi-Ku-og6.title" = "Third";
+
+/* Class = "UILabel"; text = "Loaded by SecondViewController"; ObjectID = "NDk-cv-Gan"; */
+"NDk-cv-Gan.text" = "Loaded by SecondViewController";
+
+/* Class = "UITabBarItem"; title = "Second"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Second";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "jse-dh-ArS"; */
+"jse-dh-ArS.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xuf-0G-m71"; */
+"xuf-0G-m71.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Second View"; ObjectID = "zEq-FU-wV5"; */
+"zEq-FU-wV5.text" = "Second View";
