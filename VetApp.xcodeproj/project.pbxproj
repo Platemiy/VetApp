@@ -46,6 +46,15 @@
 		7D857897247DB843009FF01F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D857896247DB843009FF01F /* EditProfileViewController.swift */; };
 		7D857899247DCB66009FF01F /* HideKyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D857898247DCB66009FF01F /* HideKyboard.swift */; };
 		7D85789B247DE8DE009FF01F /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D85789A247DE8DE009FF01F /* AlertService.swift */; };
+		7D8A574A249317E10090C1FC /* HealthIssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A5749249317E10090C1FC /* HealthIssuesViewController.swift */; };
+		7D8A574C249318030090C1FC /* HealthIssueModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A574B249318030090C1FC /* HealthIssueModelController.swift */; };
+		7D8A574E2493184E0090C1FC /* HealthIssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A574D2493184E0090C1FC /* HealthIssueCell.swift */; };
+		7D8A57512496F0A10090C1FC /* AllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A57502496F0A10090C1FC /* AllergyViewController.swift */; };
+		7D8A57532496F4E40090C1FC /* AllergyModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A57522496F4E40090C1FC /* AllergyModelController.swift */; };
+		7D8A57552496FF900090C1FC /* AllergyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A57542496FF900090C1FC /* AllergyCell.swift */; };
+		7D8A5758249718A30090C1FC /* WalkingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A5757249718A30090C1FC /* WalkingCell.swift */; };
+		7D8A575A249718BB0090C1FC /* WalkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A5759249718BB0090C1FC /* WalkingViewController.swift */; };
+		7D8A575C249718CE0090C1FC /* WalkingModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A575B249718CE0090C1FC /* WalkingModelController.swift */; };
 		7D92FC862480B0D9003AB74A /* VaccineModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D92FC852480B0D9003AB74A /* VaccineModelController.swift */; };
 		7D96EEFA2470B97900B026D8 /* FilledinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D96EEF92470B97900B026D8 /* FilledinButton.swift */; };
 		7D96EEFC2470C64000B026D8 /* HollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D96EEFB2470C64000B026D8 /* HollowButton.swift */; };
@@ -131,6 +140,15 @@
 		7D857896247DB843009FF01F /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		7D857898247DCB66009FF01F /* HideKyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKyboard.swift; sourceTree = "<group>"; };
 		7D85789A247DE8DE009FF01F /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		7D8A5749249317E10090C1FC /* HealthIssuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthIssuesViewController.swift; sourceTree = "<group>"; };
+		7D8A574B249318030090C1FC /* HealthIssueModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthIssueModelController.swift; sourceTree = "<group>"; };
+		7D8A574D2493184E0090C1FC /* HealthIssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthIssueCell.swift; sourceTree = "<group>"; };
+		7D8A57502496F0A10090C1FC /* AllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyViewController.swift; sourceTree = "<group>"; };
+		7D8A57522496F4E40090C1FC /* AllergyModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyModelController.swift; sourceTree = "<group>"; };
+		7D8A57542496FF900090C1FC /* AllergyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyCell.swift; sourceTree = "<group>"; };
+		7D8A5757249718A30090C1FC /* WalkingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingCell.swift; sourceTree = "<group>"; };
+		7D8A5759249718BB0090C1FC /* WalkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingViewController.swift; sourceTree = "<group>"; };
+		7D8A575B249718CE0090C1FC /* WalkingModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingModelController.swift; sourceTree = "<group>"; };
 		7D92FC852480B0D9003AB74A /* VaccineModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineModelController.swift; sourceTree = "<group>"; };
 		7D96EEF92470B97900B026D8 /* FilledinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledinButton.swift; sourceTree = "<group>"; };
 		7D96EEFB2470C64000B026D8 /* HollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowButton.swift; sourceTree = "<group>"; };
@@ -265,7 +283,10 @@
 		7D5094AF247B43E700E6D07D /* PetProfiles */ = {
 			isa = PBXGroup;
 			children = (
-				7D52471E2480A9470020D8BD /* vaccines */,
+				7D8A5756249718720090C1FC /* Walkings */,
+				7D8A574F2496F06B0090C1FC /* Allergies */,
+				7D8A5748249317A00090C1FC /* HealthIssues */,
+				7D52471E2480A9470020D8BD /* Vaccines */,
 				7D5094B2247B444800E6D07D /* PetProfilesViewController.swift */,
 				7D857894247D9229009FF01F /* DetailViewController.swift */,
 				7DA4775F247C70D300F6EC68 /* AddProfileViewController.swift */,
@@ -315,14 +336,44 @@
 			path = PetModel;
 			sourceTree = "<group>";
 		};
-		7D52471E2480A9470020D8BD /* vaccines */ = {
+		7D52471E2480A9470020D8BD /* Vaccines */ = {
 			isa = PBXGroup;
 			children = (
 				7DC1FD562480CEA300A8EE7F /* VaccineViewController.swift */,
 				7D92FC852480B0D9003AB74A /* VaccineModelController.swift */,
 				7D52471F2480A9640020D8BD /* VaccineCell.swift */,
 			);
-			path = vaccines;
+			path = Vaccines;
+			sourceTree = "<group>";
+		};
+		7D8A5748249317A00090C1FC /* HealthIssues */ = {
+			isa = PBXGroup;
+			children = (
+				7D8A5749249317E10090C1FC /* HealthIssuesViewController.swift */,
+				7D8A574B249318030090C1FC /* HealthIssueModelController.swift */,
+				7D8A574D2493184E0090C1FC /* HealthIssueCell.swift */,
+			);
+			path = HealthIssues;
+			sourceTree = "<group>";
+		};
+		7D8A574F2496F06B0090C1FC /* Allergies */ = {
+			isa = PBXGroup;
+			children = (
+				7D8A57502496F0A10090C1FC /* AllergyViewController.swift */,
+				7D8A57522496F4E40090C1FC /* AllergyModelController.swift */,
+				7D8A57542496FF900090C1FC /* AllergyCell.swift */,
+			);
+			path = Allergies;
+			sourceTree = "<group>";
+		};
+		7D8A5756249718720090C1FC /* Walkings */ = {
+			isa = PBXGroup;
+			children = (
+				7D8A5759249718BB0090C1FC /* WalkingViewController.swift */,
+				7D8A575B249718CE0090C1FC /* WalkingModelController.swift */,
+				7D8A5757249718A30090C1FC /* WalkingCell.swift */,
+			);
+			path = Walkings;
 			sourceTree = "<group>";
 		};
 		7DC8FE282468A5BA00FD9206 /* design */ = {
@@ -639,20 +690,26 @@
 			files = (
 				7DD542FF23A629A400A6E5EE /* SignUpViewController.swift in Sources */,
 				7DC8FE2A2468A5F200FD9206 /* shadows.swift in Sources */,
+				7D8A575A249718BB0090C1FC /* WalkingViewController.swift in Sources */,
 				7D1D5AAA247C847F00217F87 /* Vaccine+CoreDataProperties.swift in Sources */,
 				7D5094AE247B430D00E6D07D /* UIImageViewExtensions.swift in Sources */,
 				7D50946D247A057B00E6D07D /* Model.xcdatamodeld in Sources */,
 				7D1D5AAE247C847F00217F87 /* HealthIssue+CoreDataProperties.swift in Sources */,
+				7D8A57552496FF900090C1FC /* AllergyCell.swift in Sources */,
 				7D96EEFA2470B97900B026D8 /* FilledinButton.swift in Sources */,
 				7D857895247D9229009FF01F /* DetailViewController.swift in Sources */,
+				7D8A574A249317E10090C1FC /* HealthIssuesViewController.swift in Sources */,
 				7D1B56F5247F5443003D5B18 /* SolutionDogCell.swift in Sources */,
 				7D85789B247DE8DE009FF01F /* AlertService.swift in Sources */,
 				7D48441A2474908E0036754A /* Utilities.swift in Sources */,
+				7D8A57532496F4E40090C1FC /* AllergyModelController.swift in Sources */,
 				7D7C05B62471DAEA0095E325 /* StrokedImage.swift in Sources */,
 				7D857897247DB843009FF01F /* EditProfileViewController.swift in Sources */,
 				7D1B56F1247F5119003D5B18 /* CatAidViewController.swift in Sources */,
+				7D8A574C249318030090C1FC /* HealthIssueModelController.swift in Sources */,
 				7DD22A5B247F5F9B00960E7E /* DescriptionViewController.swift in Sources */,
 				7D34976024757C2E000AD0F9 /* Constants.swift in Sources */,
+				7D8A575C249718CE0090C1FC /* WalkingModelController.swift in Sources */,
 				7D1D5AAD247C847F00217F87 /* HealthIssue+CoreDataClass.swift in Sources */,
 				7DC1FD572480CEA300A8EE7F /* VaccineViewController.swift in Sources */,
 				7D857899247DCB66009FF01F /* HideKyboard.swift in Sources */,
@@ -662,9 +719,11 @@
 				7DA47760247C70D300F6EC68 /* AddProfileViewController.swift in Sources */,
 				7DD22A59247F5B4E00960E7E /* DogAidViewController.swift in Sources */,
 				7D1D5AB2247C847F00217F87 /* Pet+CoreDataProperties.swift in Sources */,
+				7D8A57512496F0A10090C1FC /* AllergyViewController.swift in Sources */,
 				7D5247202480A9640020D8BD /* VaccineCell.swift in Sources */,
 				7D977421247CA32800345400 /* petModelController.swift in Sources */,
 				7D1D5AAB247C847F00217F87 /* Allergy+CoreDataClass.swift in Sources */,
+				7D8A5758249718A30090C1FC /* WalkingCell.swift in Sources */,
 				7D5094B5247B446600E6D07D /* VetMapViewController.swift in Sources */,
 				7D1D5A9E247C841D00217F87 /* PetTableViewCell.swift in Sources */,
 				7D52471B2480A14A0020D8BD /* UserLocationObjectListener.swift in Sources */,
@@ -678,6 +737,7 @@
 				7D1D5AAF247C847F00217F87 /* DogWalking+CoreDataClass.swift in Sources */,
 				7D7C05B82471E9870095E325 /* AddGradient.swift in Sources */,
 				7D1B56F7247F54F7003D5B18 /* SolutionCatCell.swift in Sources */,
+				7D8A574E2493184E0090C1FC /* HealthIssueCell.swift in Sources */,
 				7D92FC862480B0D9003AB74A /* VaccineModelController.swift in Sources */,
 				7D52471D2480A2130020D8BD /* MapCameraListener.swift in Sources */,
 			);

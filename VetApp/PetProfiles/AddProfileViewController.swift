@@ -114,9 +114,7 @@ class AddProfileViewController: UIViewController {
             guard let imageData = addedPet?.image else {
                 return
             }
-            let imgstr = imageData.base64EncodedString(options: .lineLength64Characters)
-            print("added str: \(imgstr)")
-            
+            let imgstr = imageData.base64EncodedString(options: .lineLength64Characters)            
             var age: Int = 0
             var weight: Int = 0
             var height: Int = 0

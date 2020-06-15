@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Allergy" representedClassName="Allergy" syncable="YES">
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="DogWalking" representedClassName="DogWalking" syncable="YES">
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="HealthIssue" representedClassName="HealthIssue" syncable="YES">
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="fromDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="toDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -20,21 +23,22 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="hadHealthIssue" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HealthIssue"/>
-        <relationship name="hasAllergy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Allergy"/>
-        <relationship name="hasToWalk" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DogWalking"/>
-        <relationship name="needsVaccine" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Vaccine"/>
+        <relationship name="hadHealthIssue" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HealthIssue"/>
+        <relationship name="hasAllergy" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Allergy"/>
+        <relationship name="hasToWalk" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DogWalking"/>
+        <relationship name="needsVaccine" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Vaccine"/>
     </entity>
     <entity name="Vaccine" representedClassName="Vaccine" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isAnnual" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Allergy" positionX="0" positionY="72" width="128" height="58"/>
-        <element name="DogWalking" positionX="-18" positionY="27" width="128" height="58"/>
-        <element name="HealthIssue" positionX="-36" positionY="9" width="128" height="88"/>
-        <element name="Pet" positionX="-63" positionY="-18" width="128" height="223"/>
-        <element name="Vaccine" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="Allergy" positionX="0" positionY="72" width="128" height="73"/>
+        <element name="DogWalking" positionX="63.5859375" positionY="297.58984375" width="128" height="73"/>
+        <element name="HealthIssue" positionX="-133.65234375" positionY="159.87890625" width="128" height="103"/>
+        <element name="Pet" positionX="-361.26171875" positionY="121.11328125" width="128" height="223"/>
+        <element name="Vaccine" positionX="-227.1484375" positionY="3.26171875" width="128" height="103"/>
     </elements>
 </model>

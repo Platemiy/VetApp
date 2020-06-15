@@ -14,3 +14,9 @@ import CoreData
 public class Vaccine: NSManagedObject {
 
 }
+
+extension Vaccine: Comparable {
+    public static func < (lhs: Vaccine, rhs: Vaccine) -> Bool {
+        return lhs.displayOrder < rhs.displayOrder
+    }
+}

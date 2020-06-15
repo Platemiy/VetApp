@@ -106,9 +106,7 @@ class LogInViewController: UIViewController {
                         pet.displayOrder = Int16(doc.data()["displayOrder"] as! Int)
                         
                         let imgstr = doc.data()["image"] as! String
-                        print("login string: \(imgstr)")
                         let imgdata = Data(base64Encoded: imgstr, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)
-                        print(String(describing: imgdata))
                         pet.image = Data(base64Encoded: imgstr, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)
                         pet.name = doc.data()["name"] as! String
                         pet.breed = doc.data()["breed"] as! String

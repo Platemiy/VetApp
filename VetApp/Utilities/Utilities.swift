@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import  UIKit
 
 struct Utilities {
     static func isPasswordValid(_ password: String?) -> Bool {
@@ -22,6 +23,28 @@ struct Utilities {
     static func isUsernameValid(_ username: String?) -> Bool {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^[a-z0-9_-]{3,16}$")
         return passwordTest.evaluate(with: username)
+    }
+    
+    static func saveContext() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        let managedContext = appDelegate.persistentContainer.viewContext
+        do {
+            try managedContext.save()
+        } catch {
+            print("error")
+        }
+    }
+   
+    static func readyDateFormatter() -> DateFormatter {
+        let df = DateFormatter()
+        df.dateFormat = "dd.MM.yyyy"
+        return df
+    }
+    
+    static func readyTimeFormatter() -> DateFormatter {
+        let df = DateFormatter()
+        df.dateFormat = "HH:mm"
+        return df
     }
 }
 

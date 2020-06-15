@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 import Firebase
+import UserNotifications
 
 class PetsDataSource: NSObject {
     var pets: [Pet]
@@ -57,6 +58,17 @@ extension PetsDataSource: UITableViewDelegate {
             }
             let managedContext = appDelegate.persistentContainer.viewContext
             //let fetchRequest = NSFetchRequest<Pet>(entityName: "Pet")
+            //delete vaccine notifications
+            if let vaccines = pets[indexPath.row].needsVaccine {
+                var ids = [String]()
+                for vaccine in vaccines {
+                    if vaccine.isAnnual {
+                        ids.append(vaccine.objectID.uriRepresentation().absoluteString)
+                    }
+                }
+                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ids)
+            }
+            
             managedContext.delete(pets[indexPath.row])
             pets.remove(at: indexPath.row)
             for updatedPetIndex in indexPath.row..<pets.count {

@@ -14,3 +14,9 @@ import CoreData
 public class Allergy: NSManagedObject {
 
 }
+
+extension Allergy: Comparable {
+    public static func < (lhs: Allergy, rhs: Allergy) -> Bool {
+        return lhs.displayOrder < rhs.displayOrder
+    }
+}

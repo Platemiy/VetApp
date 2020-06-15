@@ -14,3 +14,9 @@ import CoreData
 public class DogWalking: NSManagedObject {
 
 }
+
+extension DogWalking: Comparable {
+    public static func < (lhs: DogWalking, rhs: DogWalking) -> Bool {
+        return lhs.displayOrder < rhs.displayOrder
+    }
+}

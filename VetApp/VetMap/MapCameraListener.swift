@@ -83,12 +83,12 @@ extension VetMapViewController: YMKMapObjectTapListener {
     func onMapObjectTap(with mapObject: YMKMapObject, point: YMKPoint) -> Bool {
         guard let placemark = mapObject as? YMKPlacemarkMapObject else { return false }
         let oud = placemark.userData as! ObjectUserData
-        let alert = UIAlertController(title: oud.name, message: oud.description, preferredStyle: .alert)
+        let formattedDescription = oud.description.replacingOccurrences(of: ";", with: "\n")
+        let alert = UIAlertController(title: oud.name, message: formattedDescription, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Назад", style: .cancel, handler: nil))
         if !oud.phone.isEmpty {
             alert.addAction(UIAlertAction(title: "Позвонить", style: .default, handler: { (action) in
                 let tel = oud.phone.replacingOccurrences(of: " ", with: "")
-                print(tel)
                 if let url = URL(string: "tel://\(tel)"), UIApplication.shared.canOpenURL(url) {
                     if #available(iOS 10, *) {
                         UIApplication.shared.open(url)

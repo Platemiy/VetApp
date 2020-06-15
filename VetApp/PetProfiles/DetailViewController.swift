@@ -17,12 +17,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var walkingButton: FillednButton!
     
     var pet: Pet?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if pet!.type == "cat" {
+            walkingButton.alpha = 0
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -58,16 +62,23 @@ class DetailViewController: UIViewController {
 
     }
     
-    @IBAction func saveEdited(_ seg: UIStoryboardSegue) {
-        
-    }
+    @IBAction func saveEdited(_ seg: UIStoryboardSegue) {}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let editView = segue.destination as? EditProfileViewController {
             editView.pet = pet
         }
-        if let vaccineView = segue.destination as? VaccineViewController {
+        else if let vaccineView = segue.destination as? VaccineViewController {
             vaccineView.pet = pet
+        }
+        else if let issueView = segue.destination as? HealthIssuesViewController {
+            issueView.pet = pet
+        }
+        else if let allergyView = segue.destination as? AllergyViewController {
+            allergyView.pet = pet
+        }
+        else if let walkingView = segue.destination as? WalkingViewController {
+            walkingView.pet = pet
         }
     }
 

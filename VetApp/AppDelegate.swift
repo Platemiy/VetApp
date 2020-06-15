@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 import YandexMapKit
+import UserNotifications
 
 
 @UIApplicationMain
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window : UIWindow?
     
+    let notificationCenter = UNUserNotificationCenter.current()
     
     let launchedBefore = UserDefaults.standard.bool(forKey: "isLoggedIn")
 
@@ -25,14 +27,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //configure Firebase for app
         FirebaseApp.configure()
-        //configure Yandex maps
-        print("staerted setting up yandex")
+        
+        
+        
         YMKMapKit.setApiKey("9b9c16bd-6de9-4fec-ba16-7507ba1f5313")
-        print("ended setting up yandex")
 
+        let options: UNAuthorizationOptions = [.alert, .sound]
         
+        notificationCenter.requestAuthorization(options: options) { (didAllow, error) in
+            if !didAllow {
+                print("User declined notifications")
+            }
+        }
 
-        
         //if not logged in, present login/signup view
         if !launchedBefore {
             let authStoryboard = UIStoryboard(name: "Auth", bundle: nil)

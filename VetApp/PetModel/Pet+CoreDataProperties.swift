@@ -25,10 +25,10 @@ extension Pet {
     @NSManaged public var weight: Int16
     @NSManaged public var image: Data?
     @NSManaged public var displayOrder: Int16
-    @NSManaged public var hadHealthIssue: NSSet?
-    @NSManaged public var hasAllergy: NSSet?
-    @NSManaged public var hasToWalk: NSSet?
-    @NSManaged public var needsVaccine: NSSet?
+    @NSManaged public var hadHealthIssue: Set<HealthIssue>?
+    @NSManaged public var hasAllergy: Set<Allergy>?
+    @NSManaged public var hasToWalk: Set<DogWalking>?
+    @NSManaged public var needsVaccine: Set<Vaccine>?
 
 }
 
