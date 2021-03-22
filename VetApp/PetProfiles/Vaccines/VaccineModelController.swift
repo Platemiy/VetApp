@@ -42,6 +42,8 @@ extension VaccineDataSource: UITableViewDataSource {
                 vaccine.isAnnual = false
                 Utilities.saveContext()
             }
+        } else {
+            cell.date = nil
         }
         cell.vaccine = vaccine
         

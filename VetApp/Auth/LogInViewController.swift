@@ -79,6 +79,7 @@ class LogInViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
+    
     func synchronizeFirebase() {
         if let uid = Auth.auth().currentUser?.uid {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {

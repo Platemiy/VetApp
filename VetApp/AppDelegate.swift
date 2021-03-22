@@ -30,7 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        YMKMapKit.setApiKey("9b9c16bd-6de9-4fec-ba16-7507ba1f5313")
+
+        YMKMapKit.setApiKey("YOUR-API-KEY")
 
         let options: UNAuthorizationOptions = [.alert, .sound]
         

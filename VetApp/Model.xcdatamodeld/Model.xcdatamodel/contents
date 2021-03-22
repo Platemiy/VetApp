@@ -35,10 +35,10 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Allergy" positionX="0" positionY="72" width="128" height="73"/>
-        <element name="DogWalking" positionX="63.5859375" positionY="297.58984375" width="128" height="73"/>
-        <element name="HealthIssue" positionX="-133.65234375" positionY="159.87890625" width="128" height="103"/>
+        <element name="Allergy" positionX="12.53515625" positionY="117.42578125" width="128" height="73"/>
+        <element name="DogWalking" positionX="10.43359375" positionY="241.3203125" width="128" height="73"/>
+        <element name="HealthIssue" positionX="-182.953125" positionY="33.67578125" width="128" height="103"/>
         <element name="Pet" positionX="-361.26171875" positionY="121.11328125" width="128" height="223"/>
-        <element name="Vaccine" positionX="-227.1484375" positionY="3.26171875" width="128" height="103"/>
+        <element name="Vaccine" positionX="-120.40234375" positionY="373.19140625" width="128" height="103"/>
     </elements>
 </model>

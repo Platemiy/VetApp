@@ -68,6 +68,17 @@ extension PetsDataSource: UITableViewDelegate {
                 }
                 UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ids)
             }
+            if pets[indexPath.row].breed == "dog" {
+                if let walkings = pets[indexPath.row].hasToWalk {
+                    var ids = [String]()
+                    for walking in walkings {
+                        ids.append(walking.objectID.uriRepresentation().absoluteString)
+                        
+                    }
+                    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ids)
+                }
+            }
+            
             
             managedContext.delete(pets[indexPath.row])
             pets.remove(at: indexPath.row)

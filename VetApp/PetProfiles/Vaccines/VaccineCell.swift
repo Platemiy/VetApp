@@ -32,6 +32,8 @@ class VaccineCell: UITableViewCell {
         didSet {
             if let date = date {
                 dateTextField.text = date
+            } else {
+                dateTextField.text = nil
             }
             
         }
@@ -41,7 +43,7 @@ class VaccineCell: UITableViewCell {
         super.awakeFromNib()
         datePicker.datePickerMode = .date
         datePicker.minimumDate = Date(timeIntervalSinceNow: 86400)
-        
+        datePicker.date = datePicker.minimumDate!
         dateTextField.inputView = datePicker
         
         
@@ -59,8 +61,8 @@ class VaccineCell: UITableViewCell {
         for: .editingChanged)
         //dateTextField.addTarget(self, action: #selector(dateTextFieldTarget),
         //for: .editingChanged)
-        datePicker.addTarget(self, action: #selector(dateTextFieldTarget),
-                             for: .valueChanged)
+        dateTextField.addTarget(self, action: #selector(dateTextFieldTarget),
+                             for: .editingChanged)
         isAnnualSwitch.addTarget(self, action: #selector(flipSwitch),
                                       for: .valueChanged)
         // Initialization code
@@ -92,24 +94,41 @@ class VaccineCell: UITableViewCell {
 
         
         
-        if sender.isOn && !dateTextField.text!.isEmpty {
+        if sender.isOn && !dateTextField.text!.isEmpty  {
             let content = UNMutableNotificationContent()
             content.title = nameTextField.text!
             content.body = "Завтра у вас запланирована прививка"
-            let notificationDate = Calendar.current.date(bySettingHour: 3, minute: 35, second: 0, of: vaccine!.date!)!
+            let currentDate = Date()
+            let currentCalendar = Calendar.current
+            let hours = currentCalendar.component(.hour, from: currentDate)
+            let minutes = currentCalendar.component(.minute, from: currentDate)
+            let seconds = currentCalendar.component(.second, from: currentDate)
+
             
-            var dateComponents =  Calendar.current.dateComponents([.day, .month, .hour, .minute], from: notificationDate)
+            let notificationDate = currentCalendar.date(bySettingHour: hours, minute: minutes, second: seconds+5, of: (vaccine?.date)!)!
+            
+            var dateComponents =  Calendar.current.dateComponents([.day, .month, .hour, .minute, .second], from: notificationDate)
             dateComponents.day! -= 1
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
             
             let requestID = vaccine!.objectID.uriRepresentation().absoluteString
-            
+            print("from flip: \(vaccine!.objectID.uriRepresentation().absoluteString)")
+
             
             let request = UNNotificationRequest(identifier: requestID, content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(request) { (err) in
                 if let err = err {
+                    print("error flip: \(self.vaccine!.objectID.uriRepresentation().absoluteString)")
+
                     print(err.localizedDescription)
+                }
+            }
+            UNUserNotificationCenter.current().getPendingNotificationRequests { (notif) in
+                for n in notif {
+                    print(n.content.body)
+                    print(n.trigger!.debugDescription)
+                    
                 }
             }
         }
@@ -149,7 +168,10 @@ class VaccineCell: UITableViewCell {
 
         vaccine!.date = datePicker.date
         vaccine!.isAnnual = false
+        print("from target: \(vaccine!.objectID.uriRepresentation().absoluteString)")
+
         Utilities.saveContext()
+        
         
         
 
@@ -158,6 +180,19 @@ class VaccineCell: UITableViewCell {
     @objc func doneAction(_ sender: Any) {
 
         dateTextField.text = df.string(from: datePicker.date)
+        print("from done: \(vaccine!.objectID.uriRepresentation().absoluteString)")
+        if vaccine!.date != nil && isAnnualSwitch.isOn {
+
+                   let oldID = vaccine!.objectID.uriRepresentation().absoluteString
+                   UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [oldID])
+               }
+               
+               isAnnualSwitch.isEnabled = true
+               isAnnualSwitch.isOn = false
+
+               vaccine!.date = datePicker.date
+               vaccine!.isAnnual = false
+               Utilities.saveContext()
         self.endEditing(true)
     }
     

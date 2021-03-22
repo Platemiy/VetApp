@@ -74,6 +74,8 @@ class PetProfilesViewController: UIViewController {
         }
         UserDefaults.standard.set(false, forKey: "isLoggedIn")
         UserDefaults.standard.synchronize()
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
